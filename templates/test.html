@@ -1,0 +1,100 @@
+{{define "Test"}} <!-- Pour la lecture utilisateur -->
+<div class="checkbox">
+        <form method="POST">
+                <div class="test2">
+                        <div class="location">
+                                <legend>Concert :</legend>
+                                <div>
+                                        <input type="checkbox" name="europe" id="cbx2" style="display: none;">
+                                        <label for="cbx2" class="check">Europe
+                                                <svg width="18px" height="18px" viewBox="0 0 18 18">
+                                                <path d="M 1 9 L 1 9 c 0 -5 3 -8 8 -8 L 9 1 C 14 1 17 5 17 9 L 17 9 c 0 4 -4 8 -8 8 L 9 17 C 5 17 1 14 1 9 L 1 9 Z"></path>
+                                                <polyline points="1 9 7 14 15 4"></polyline>
+                                                </svg>
+                                        </label>
+                                        </div>
+                          
+                                <div>
+                                        <input type="checkbox" name="amerique" id="cbx3" style="display: none;">
+                                        <label for="cbx3" class="check">Amerique
+                                                <svg width="18px" height="18px" viewBox="0 0 18 18">
+                                                <path d="M 1 9 L 1 9 c 0 -5 3 -8 8 -8 L 9 1 C 14 1 17 5 17 9 L 17 9 c 0 4 -4 8 -8 8 L 9 17 C 5 17 1 14 1 9 L 1 9 Z"></path>
+                                                <polyline points="1 9 7 14 15 4"></polyline>
+                                                </svg>
+                                        </label>
+                                </div>
+                              <div>
+                                <input type="checkbox" name="asie" id="cbx4" style="display: none;">
+                                        <label for="cbx4" class="check">Asie
+                                                <svg width="18px" height="18px" viewBox="0 0 18 18">
+                                                <path d="M 1 9 L 1 9 c 0 -5 3 -8 8 -8 L 9 1 C 14 1 17 5 17 9 L 17 9 c 0 4 -4 8 -8 8 L 9 17 C 5 17 1 14 1 9 L 1 9 Z"></path>
+                                                <polyline points="1 9 7 14 15 4"></polyline>
+                                                </svg>
+                                        </label>
+                              </div>
+                          
+                              <div>
+                                <input type="checkbox" name="afrique" id="cbx5" style="display: none;">
+                                        <label for="cbx5" class="check">Afrique
+                                                <svg width="18px" height="18px" viewBox="0 0 18 18">
+                                                <path d="M 1 9 L 1 9 c 0 -5 3 -8 8 -8 L 9 1 C 14 1 17 5 17 9 L 17 9 c 0 4 -4 8 -8 8 L 9 17 C 5 17 1 14 1 9 L 1 9 Z"></path>
+                                                <polyline points="1 9 7 14 15 4"></polyline>
+                                                </svg>
+                                        </label>
+                              </div>
+                              <div>
+                                <input type="checkbox" name="amerique" id="cbx6" style="display: none;">
+                                        <label for="cbx6" class="check">Oceanie
+                                                <svg width="18px" height="18px" viewBox="0 0 18 18">
+                                                <path d="M 1 9 L 1 9 c 0 -5 3 -8 8 -8 L 9 1 C 14 1 17 5 17 9 L 17 9 c 0 4 -4 8 -8 8 L 9 17 C 5 17 1 14 1 9 L 1 9 Z"></path>
+                                                <polyline points="1 9 7 14 15 4"></polyline>
+                                                </svg>
+                                        </label>
+                        </div>   
+        </div>
+        <div class="membres">
+                <label>Membres du groupe : </br></label>
+                        <input type="range" name="member" value="0" min="0" max="10"oninput="this.nextElementSibling.value = this.value">
+                        <output></output>
+                        
+                <output></output>
+              </div>
+        <div class="date">
+                <label>Date Creation pars decennies : </br></label>
+                <input type="range" name="date" value="1900" min="1900" step="10" max="2020"oninput="this.nextElementSibling.value = this.value">
+                <output></output>
+              </div>
+        <div class="album">
+                <label>Date premier album pars decennies : </br></label>
+                <input type="range" name="album" value="1900" min="1900" step="10" max="2020"oninput="this.nextElementSibling.value = this.value">
+                <output></output>
+        </div>
+        <div class="submit">
+                              <button>
+                                <input type="submit" value="Rechercher" class="inputrecherche">
+                        </button></form>
+                        </div>
+</div>    
+<div class ="Grille">
+
+        <ol class="uwu">
+                {{range .}}
+                <div class="Capsule">
+
+                        <div class="CapsuleName">
+                                <li>{{.Name}}</li>
+                        </div>
+
+                        <div class="CapsuleImage">
+                                <form method="POST" class="image">
+                                        <input type="hidden" value={{.Id}} name="artisteImage" class="image">
+                                        <input type="image" src={{.Image}} name="artisteTest">
+                                </form>
+                        </div>
+
+                </div>
+                 {{end}}
+        </ol>
+
+</div>
+{{end}}

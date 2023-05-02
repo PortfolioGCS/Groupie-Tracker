@@ -1,0 +1,25 @@
+.haut {
+    background-color: #343A40;
+    height: 10vh;
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+}
+.logo{
+    font-size: 40px;
+    color: white;
+    margin: auto;
+    margin-left:10px;
+    text-decoration: none;
+}
+.home{
+    display: flex;
+}
+.header {
+    overflow: hidden;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+}

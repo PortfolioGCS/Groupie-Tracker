@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./static/style_index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./static/logo.png"/>
+    <title>Groupie Tracker</title>
+</head>
+
+<body>
+
+    <div class="background">
+        <div class="container">
+            
+            
+            <div class="divbutton">
+                <button id="button">DECOUVRIR</button>
+            </div>
+            
+            <div id="divbutton2">
+                <a href="http://localhost:8000/AllArtiste"><button id="button2">TOUS LES ARTISTES</button></a>
+            </div>
+            
+            {{template "lecture" .}}
+            <div class="nom"><h1>GROUPIE TRACKER</h1></div>
+            
+        </div>
+    </div>
+
+</body>
+
+<script src="/static/script.js"></script>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./static/style_artiste.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./static/logo.png"/>
+    <title>Groupie Tracker</title>
+</head>
+<body>
+    <div class="background">
+        <div class="container">
+        {{template "Seul" .}}
+        </div>
+        <div class="buttonmap">
+                <form action="http://localhost:8000/map">
+                  <div class="center">
+                    <button class="btn">
+                      <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+                        <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+                        <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+                      </svg>
+                      <span>Découvrir les concerts</span>
+                    </button>
+                  </div>
+                </form>
+            </div>
+        <div class="stat">
+          
+          {{template "Basdepage".}}
+        </div>
+    </div>
+</body>
+</html>
